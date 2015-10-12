@@ -1,0 +1,3 @@
+#!/bin/bash
+gcc -o udp_client udp_client.c
+./udp_client localhost 5566
