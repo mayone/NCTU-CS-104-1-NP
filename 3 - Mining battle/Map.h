@@ -24,6 +24,7 @@ public:
 	Field minerField[4];
 private:
 	char mapStr[maxMapStrSize];
+	int mapStrLen;
 	int mapSize[2];
 	int mapAxis[2];
 };

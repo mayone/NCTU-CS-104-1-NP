@@ -9,6 +9,8 @@ void Map::initialize(string mapName)
 	ifstream fin(mapName.c_str(), ifstream::in);
 	fin.read(mapStr, maxMapStrSize * sizeof(char));
 
+	mapStrLen = strlen(mapStr);
+
 	getSizeAxis();
 	assignFields();
 
@@ -23,7 +25,7 @@ void Map::getSizeAxis()
 		}
 		if (mapStr[i] == '\n') {
 			mapSize[0] = i;
-			mapSize[1] = strlen(mapStr) / (mapSize[0]+1);
+			mapSize[1] = mapStrLen / (mapSize[0]+1);
 			break;
 		}
 	}
@@ -88,7 +90,7 @@ void Map::display()
 	}
 	cout << endl;
 	cout << "|";
-	for(int i = 0, j = mapAxis[0]; i < strlen(mapStr); i++) {
+	for(int i = 0, j = mapAxis[0]; i < mapStrLen; i++) {
 		if (mapStr[i-1] == '\n' || mapStr[i] == '\n') {
 			cout << "|";
 		}
