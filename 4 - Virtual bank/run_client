@@ -1,2 +1,2 @@
 #!/bin/bash
-node udp_client.js commands/sample
+node udp_client.js commands/command

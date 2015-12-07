@@ -138,7 +138,7 @@ server.on('message', function (message, remote) {
 				}
 			}
 			if (!account_found)
-				response.message = "account not find";
+				response.message = "account not found";
 		}
 		else if (request.action == "bomb") {
 			cmd_buf.push({
