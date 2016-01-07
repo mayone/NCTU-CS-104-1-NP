@@ -31,7 +31,7 @@ server.on('message', function (message, remote) {
 	}
 	// pop executed commands
 	while((cmd_buf.length > 0) && (cmd_buf[0].cycles == 0)) {
-		cmd_buf.shift();
+		cmd_buf.shift();	// pop front
 	}
 
 	var response = {"message" : null};
