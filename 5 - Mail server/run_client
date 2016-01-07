@@ -1,0 +1,2 @@
+#!/bin/bash
+node tcp_client.js samples/sample
