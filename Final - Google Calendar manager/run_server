@@ -1,0 +1,2 @@
+#!/bin/bash
+node http_server.js 140.113.66.208 5000

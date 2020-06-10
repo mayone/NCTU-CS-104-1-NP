@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>List</title>
+		<link rel="shortcut icon" type="image/png" href="./pic/rabbit.png">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<!-- jQuery  -->
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<form method="post" action="main.php">
+			<input type="text" name="startDate" /> <br />
+			<input type="text" name="endDate" />
+			<input type="submit" value="list events"/> <br />
+		</form>
+
+		<form id="main" class="form-inline" style="padding-top: 10px; display: none;">
+			<fieldset class="form-group" style="padding-left: 10px;">
+				<label for="startdate">StartDate</label>
+				<input type="date" class="form-control" id="startdate" value="">
+			</fieldset>
+			<fieldset class="form-group" style="padding-left: 10px;">
+				<label for="enddate">EndDate</label>
+				<input type="date" class="form-control" id="enddate" value="">
+			</fieldset>
+			<button id="submit_button" type="button" class="btn btn-primary">Submit</button>
+		</form>
+		<hr/>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Summary</th>
+					<th>Start Time</th>
+					<th>End Time</th>
+				</tr>
+			</thead>
+			<tbody id="table_body">
+			</tbody>
+		</table>
+	</body>
+</html>
